@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>
+      Pantau penyebaran covid-19
+    </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- font-awesome icons css -->
+    <link rel="stylesheet" href="css/all.css">
+    <!-- main css -->
+    <link rel="stylesheet" href="css/prov.css">
+</head>
+<body>
+
+<!-- web icon -->
+<link rel="shortcut icon" href="img/logo/virus.svg">
+<!-- web icon -->  
+
+<!-- icon love-->
+<link href='//stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'/>
+
+
+<!-- Navbar Start-->
+ <nav class="navbar navbar-expand-md fixed-top">
+    <div class="container">  
+      <!-- Brand -->
+      <a class="navbar-brand" href="index.php" class="font-weight-bold">Covid-19</a>
+
+      <!-- Toggler/collapsibe Button -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+      <i class="fas fa-bars"></i>
+      </button>
+
+       <!-- Navbar links -->
+       <div class="collapse navbar-collapse" id="collapsibleNavbar">
+          <ul class="navbar-nav ml-auto ">
+            <li class="nav-item ">
+              <a class="nav-link" href="index.php">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-scroll-nav="0" href="#">Indonesia</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.php">Vaksin</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="rumah-sakit.php">Rumah Sakit</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.php">Portal Berita</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.php">Donasi</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+<!-- Navbar End-->
+
+
+<!-- mengakali padding atas -->
+  <section class="mengakali1" data-scroll-index="0">
+    <div class="container">
+      <div class="row">
+      </div>
+    </div>
+  </section>
+<!-- akhir dari padding atas -->
+
+<!-- Data Provinsi -->
+<section class="data-prov pt-5 pb-4">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <h3 class="font-weight-bold text-center pb-3">Data Covid-19 Per Provinsi</h3>
+          <div class="col-sm-5 offset-sm-7">
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Cari Provinsi..." id="search-input">
+                <div class="input-group-append">
+                <button class="btn btn-outline-secondary" type="button" id="search-button">Cari</button>
+                </div>
+                </div>
+              </div>
+              <div class="d-flex justify-content-between">
+                <button class="btn btn-outline-secondary" type="button" id="refresh">Refresh <span class="fas fa-refresh"></button>
+            <div class="align-self-center">
+          <a type="button" href="index.php">Kembali</a>
+        </div>
+      </div>
+    </div>
+  </div> 
+</div>
+</section> 
+
+<section>
+  <div class="container">
+    <div class="row" id="data-succes">            
+    </div>
+  </div>
+</section>
+
+<section class="data-not-found">
+  <div class="row" id="data-list">
+
+  </div>
+</section>
+
+<!-- Pop Up Detail -->
+
+  <div class="container">
+      <div class="row">
+        <div class="col-sm-3">
+          <!-- Modal -->
+            <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content" id="isi-popup">
+                    <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Detail</h5>
+                    <button type="button " class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                      </div>
+                      <div class="modal-body">
+                        
+                      </div>
+                      <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+
+
+<!-- Akhir dari Pop Up detail -->
+
+
+
+<!-- Footer -->
+   <footer class="text-center pt-3 pb-3">
+      Made with <i class="fa fa-heart" aria-hidden="true" style="color:#be1931"></i> <a type="button" href="https://www.instagram.com/faruq.maulanaa/" target="_blank"><span> by Promise </span></a>
+   </footer>
+<!-- Akhir dari footer -->
+
+
+<!-- Theme -->
+
+  <div class="toggle-theme">
+    <i class="fas "></i>
+  </div>
+
+<!-- Akhir Theme -->
+
+
+
+
+
+<!-- Akhir Data Provinsi -->
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js" integrity="sha512-2rNj2KJ+D8s1ceNasTIex6z4HWyOnEYLVC3FigGOmyQCZc2eBXKgOxQmo3oKLHyfcj53uz4QMsRCWNbLd32Q1g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+
+<!-- jquery js -->
+<script src="js/jquery.min.js"></script>
+<!-- popper js -->
+<script src="js/popper.min.js"></script>  
+<!-- bootstrap js -->
+<script src="js/bootstrap.min.js"></script>
+<!-- main js -->
+<script src="js/main.js"></script>  
+<!-- scroll js -->
+<script src="js/scrollIt.min.js"></script>
+<!-- Provinsi  -->
+<script src="js/province.js"></script>
+<!-- Remove Background -->
+<script src="js/removeBanner.js"></script>
+</body>
+
+</html>
