@@ -1,0 +1,729 @@
+/*-------------
+Fonts
+-------------*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,500;0,600;0,700;0,800;1,900&display=swap');
+
+/*-------------
+Global css
+-------------*/
+:root{
+	--main-color: #7857fe;
+	--main-color2:#7857fd;
+	--color-1: #e91e63;
+	--color-2: #f5ae10;
+	--color-3: #09d69c;
+	--bg-dark: #2b2c2f;
+	--main-to-dark-color:var(--main-color);
+	--dark-to-main-color:var(--bg-dark);
+	--shadow-black-100:0 5px 15px rgba(0,0,0,0.1);
+	--shadow-black-300:0 5px 15px rgba(0,0,0,0.3);
+	--black-900: #000000;
+	--black-400: #555555;
+	--black-100: #f7f7f7;
+	--black-000: #ffffff;
+	--black-alpha-100: rgba(0,0,0,0.05); 
+}
+body{
+	font-family: 'Poppins', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	overflow-x: hidden;
+	background-color: var(--black-000); 
+
+}
+*{
+	margin:0;
+	padding: 0;
+	outline: none!important;
+}
+ul{
+	list-style: none;
+}
+
+/*-------------
+Keyframe Animation
+-------------*/
+@keyframes spin_01{
+	0%{
+		transform: rotate(0deg);
+	}
+	100%{
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes bounceTop_01{
+	0%,100%{
+		transform: translateY(13px);
+	}
+	50%{
+		transform: translateY(0px);
+	}
+
+}
+@keyframes zoomInOut_01{
+	0%{
+		transform: scale(0);
+	}
+	100%{
+		transform: scale(1);
+		opacity: 0;
+	}
+
+}
+
+/*-------------
+Last of Keyframe Animation
+-------------*/
+
+
+
+/*---------Body-------------*/
+body.dark{
+	--main-color2:var(--bg-dark);
+	--black-100: var(--bg-dark);
+	--black-000: #282829;
+	--black-400: #d2d2d6;
+	--main-to-dark-color:var(--bg-dark);
+	--dark-to-main-color:var(--main-color);
+	--shadow-black-100:var(--shadow-black-300);
+	--black-alpha-100: rgba(255,255,255,0.05);
+	--black-900: #ffffff;
+	--black-100: var(--bg-dark);
+}
+
+
+/*-------preloader----------*/
+.preloader{
+	position: fixed;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 2100;
+	background-color: var(--main-to-dark-color);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.preloader span{
+	display: block;
+	height: 60px;
+	width: 60px;
+	background-color: var(--dark-to-main-color);
+	border-radius: 50%;
+	animation: zoomInOut_01 1s ease infinite;
+}
+
+
+
+/*-------------
+Navbar
+-------------*/
+.navbar{
+	background-color: transparent;
+	padding: 20px 20px;
+	transition: all 0.5s ease;
+}
+.navbar.navbar-shrink{
+	box-shadow: 0 10px 10px rgba(0,0,0,0.1);
+	background-color: var(--main-color);
+	padding: 10px 30px;
+}
+.navbar > .container{
+	padding: 10px 0;
+}
+.navbar .navbar-brand{
+	 font-size: 30px;
+	 color: #ffffff;
+	 font-weight: 500;
+	 text-transform: capitalize;
+}
+
+.navbar .nav-item{
+	margin-left: 40px;
+}
+.navbar .nav-item .nav-link{
+	 font-size: 30px;
+	 color:#ffffff;
+	 text-transform: capitalize;
+	 font-weight: 400;
+	 padding:5px 0;
+	 font-size: 16px; 
+	 position: relative;
+
+}
+.navbar .nav-item .nav-link::before{
+	content: '';
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	height: 1px;
+	background-color: #ffffff;
+	transition: all 0.5s ease;
+	transform: scale(0);
+}
+.navbar .nav-item .nav-link.active::before,
+.navbar .nav-item .nav-link:hover::before{
+	transform: scale(1);
+}
+
+/*----------penyesuaian warna halaman-----------------*/
+.mengakali{
+	padding-bottom: 60px;
+	background-color: var(--main-color2);
+	position: relative;
+	z-index: 1;
+}
+.home{
+	padding-bottom: 100px;
+	padding-top: 100px;
+}
+.coba{
+	padding-top: 80px;
+	padding-bottom: 80px;
+}
+.vaksin-box{
+	padding-top: 100px;
+	padding-bottom: 100px;
+}
+.covid-prevention{
+	padding-top: 80px;
+	padding-bottom: 80px;
+}
+.hoax-news{
+	padding-top: 50px;
+	padding-bottom: 80px;
+	color:#F1F2F3;
+}
+.covid-news{	
+	padding-top: 80px;
+	color:#F1F2F3;
+}
+
+.donasi{
+	padding-top: 100px;
+	padding-bottom: 100px;	
+}
+
+/*-------------------------BATAS--------------------*/
+
+/*-------------Home--------------*/
+.home{
+	background-color: var(--main-color2);
+	border-radius: 0 0 100px 0;
+	position: relative;
+	z-index: 1;
+	color:#ffffff;
+
+}
+.home-box{
+	padding: 20px 30px;
+}
+.home-box h1{
+	font-size: 1.7em;
+}
+.img-background img{
+	max-width: 100%;
+}
+
+
+/*-------------Home img animation--------------*/
+.home-img{
+	position: absolute;
+	z-index: 1;
+}
+.home-img .img-1 img{
+	width: 70px;
+	top: 20%;
+	left: 200%;
+	transform-origin: 50% 50%;
+	animation: bounceTop_01 5s ease infinite;
+}
+.home-img .img-2 img{
+	width: 35px;
+	top: 100%;
+	left: 100%;
+	transform-origin: 50% 50%;
+	animation: spin_01 14s linear infinite;
+}
+.home-img .img-1{
+	display: none;
+}
+.home-img .img-2{
+	display: none;
+}
+
+
+
+/*COBA RESPONSIVE*/
+@media(max-width: 375px){
+	.navbar{
+	padding: 5px 45px;
+	}
+	.mengakali{
+	padding-bottom: 30px;
+	background-color: var(--main-color);
+	position: relative;
+	z-index: 1;
+	}
+	.navbar-toggler{
+		background-color: var(--dark-to-main-color);
+		box-shadow: var(--shadow-black-300);
+		color: #ffffff;
+	}
+	.navbar-nav{
+		background-color: var(--dark-to-main-color);
+		box-shadow: var(--shadow-black-300);
+	}
+	.navbar .nav-item{
+		margin:0;
+		padding: 5px 15px;
+	}
+	.navbar.navbar-shrink .navbar-togler,
+	.navbar.navbar-shrink .navbar-nav{
+	background-color: var(--main-color);
+	}
+}
+@media(max-width: 370px){
+	.navbar{
+	padding: 5px 45px;
+	}
+	.mengakali{
+	padding-bottom: 30px;
+	background-color: var(--main-color);
+	position: relative;
+	z-index: 1;
+	}
+	.navbar-toggler{
+		background-color: var(--dark-to-main-color);
+		box-shadow: var(--shadow-black-300);
+		color: #ffffff;
+	}
+	.navbar-nav{
+		background-color: var(--dark-to-main-color);
+		box-shadow: var(--shadow-black-300);
+	}
+	.navbar .nav-item{
+		margin:0;
+		padding: 5px 15px;
+	}
+	.navbar.navbar-shrink .navbar-togler,
+	.navbar.navbar-shrink .navbar-nav{
+	background-color: var(--main-color);
+	}
+}
+
+@media(max-width: 767px){
+	.navbar{
+	padding: 5px 45px;
+	}
+	.mengakali{
+	padding-bottom: 30px;
+	background-color: var(--main-to-dark-color);
+	position: relative;
+	z-index: 1;
+	}
+	.navbar-toggler{
+		background-color: var(--dark-to-main-color);
+		box-shadow: var(--shadow-black-300);
+		color: #ffffff;
+	}
+	.navbar-nav{
+		background-color: var(--dark-to-main-color);
+		box-shadow: var(--shadow-black-300);
+	}
+	.navbar .nav-item{
+		margin:0;
+		padding: 5px 15px;
+	}
+	.navbar.navbar-shrink .navbar-togler,
+	.navbar.navbar-shrink .navbar-nav{
+	background-color: var(--main-color);
+	}
+}
+
+@media(max-width: 360px){
+	.navbar{
+		padding: 0 45px;
+	}
+	.home{
+		padding-top: 20px;
+	}
+	.mengakali{
+		padding-bottom: 40px;
+		background-color: var(--main-color2);
+		position: relative;
+		z-index: 1;
+	}
+	.navbar-toggler{
+		background-color: var(--dark-to-main-color);
+		box-shadow: var(--shadow-black-300);
+		color: #ffffff;
+	}
+	.navbar-nav{
+		background-color: var(--dark-to-main-color);
+		box-shadow: var(--shadow-black-300);
+	}
+	.navbar .nav-item{
+		margin:0;
+		padding: 5px 15px;
+	}
+	.navbar.navbar-shrink .navbar-togler,
+	.navbar.navbar-shrink .navbar-nav{
+	background-color: var(--main-color);
+	}
+}
+
+
+@media(max-width: 414px){
+	.navbar{
+		padding: 0 45px;
+	}
+	.home{
+		padding-top: 20px;
+	}
+	.mengakali{
+		padding-bottom: 40px;
+		background-color: var(--main-color2);
+		position: relative;
+		z-index: 1;
+	}
+	.navbar-toggler{
+		background-color: var(--dark-to-main-color);
+		box-shadow: var(--shadow-black-300);
+		color: #ffffff;
+	}
+	.navbar-nav{
+		background-color: var(--dark-to-main-color);
+		box-shadow: var(--shadow-black-300);
+	}
+	.navbar .nav-item{
+		margin:0;
+		padding: 5px 15px;
+	}
+	.navbar.navbar-shrink .navbar-togler,
+	.navbar.navbar-shrink .navbar-nav{
+	background-color: var(--main-color);
+	}
+	.navbar-collapse .navbar-nav .nav-item a{
+	color:#ffffff;
+	} 
+}
+
+
+
+/*----------------Covid Indo Real Time-----------*/
+.coba{
+	background-color: var(--black-000);
+}
+.api-real1 p{
+	font-size: 1.5em;
+	color:var(--black-900);
+	font-weight: 700;
+	text-transform: capitalize;
+}
+.api-real1 h3{
+	font-size: 2.3em;
+	color:var(--black-900);
+	font-weight: 700;
+	text-transform: capitalize;
+}
+.api-real1 h3 span{
+	color:var(--main-color);
+}
+
+.api-real{
+	min-height: 250px;
+}
+.api-real .box{
+    padding : 20px 30px;
+    border-radius: 5px;
+    box-shadow: var(--shadow-black-100);
+    margin-bottom: 10px;
+}
+.api-real h4{
+	font-size: 3em;
+    color: var(--black-900);
+}
+.api-real p{
+	font-family: 'Mulish', sans-serif;
+	font-family: 'Questrial', sans-serif;
+	color: white;
+}
+
+
+/*------------Last Update--------*/
+.lastupdate .text1{
+	padding: 5px 0;
+	font-size: 0.8em;
+	color:var(--black-400);
+	font-weight: 700;
+	text-transform: capitalize;
+}
+.lastupdate .text2{
+	padding: 5px 0;
+	font-size: 0.8em;
+	color:var(--black-900);
+	font-weight: 700;
+	text-transform: capitalize;
+}
+
+/*-----------vaksin-----------*/
+
+.vaksin-box{
+	padding:50px 0;
+	background-color: var(--black-100);
+	border-radius: 100px 0 50px 0;
+}
+.vaksin-box img{
+	max-width: 100%;
+}
+
+.vaksin-box h1{
+	font-size: 3em;
+	color:var(--main-color);
+}
+.vaksin-box hr{
+	border-top: 4px solid var(--main-color);
+}
+
+.vaksin1{
+	margin:10px;
+}
+.vaksin-box1{
+	padding : 30px 40px;
+    border-radius: 5px;
+    box-shadow: var(--shadow-black-100);
+    background-color: var(--black-000); 
+}
+.vaksin-box .text{
+	font-size: 2.5em;
+}
+.vaksin-box .text1{
+	font-size: 0.7em;
+	color:#bfbfbf;
+}
+.vaksin-box .status{
+	font-size: 0.9em;
+}
+
+.vaksin-box1 h3{
+	font-size: 1.5em;
+	color:var(--black-900);
+}
+.vaksin-box1 h2{
+	color:var(--black-900);
+}
+.vaksin-box .text3{
+	padding: 5px 0;
+	font-size: 0.6em;
+	color:var(--black-400);
+}
+.vaksin-box1 .persentase span{ 
+	color:var(--black-900);
+}
+
+.vaksin-box1 .text4 span{
+    line-height: 22px;
+    color: rgb(255, 0, 128);
+}
+
+.vaksin-box1 .text5 span{
+    line-height: 22px;
+    color: rgb(248, 28, 229);
+}
+
+/*----------HOAX-------------*/
+.hoax{
+	padding:20px 40px;
+	background-color: #2E343B;
+	border-radius: 5px;
+}
+
+.hoax-news h2{
+	font-size: 2em;
+}
+
+
+
+
+
+
+
+/*------------ Hoax Page--------------*/
+.hoax-news .hoax1{
+	padding-top: 15px;
+	padding-bottom: 0;
+	padding-right: 10px;
+	padding-left: 10px;
+	background-color: #2E343B;
+	border-radius: 5px;
+}
+
+
+/*------covid prevention--------*/
+.covid-prevention{
+	min-height: 250px;
+	color:var(--black-900);
+	font-weight: 700;
+	text-transform: capitalize;
+}
+.covid-prevention h3{
+	color:var(--black-900);
+	font-weight: 700;
+	text-transform: capitalize;
+}
+.covid-prevention h3 span{
+	color:var(--main-color);
+}
+.covid-prevention .prevention-box{
+	box-shadow: var(--shadow-black-100);
+	padding: 10px;
+	border-radius: 5px;
+}
+.covid-prevention img {
+	width: 330px;
+}
+
+
+.scroll{
+	height: 700px;
+	overflow: scroll;
+    color: #22272C;
+
+}
+.atasbro{
+    position: sticky;
+    top:0;
+}
+.prevention-box img{
+	max-width: 100%;
+}
+/*---------------covid news----------------*/
+.covid-news{
+	background-color:var(--black-100);
+	border-radius: 50px 0 50px 0;
+}
+.covid-news{
+	max-width: 100%;
+}
+.covid-news h2 { 
+    font-size: 2em;
+	color:var(--black-900);
+	font-weight: 700;
+	text-transform: capitalize;
+}
+.news a{
+	color:var(--black-900);
+}
+.hoax a{
+	color:var(--black-900);
+}
+.text1 a{
+	color:var(--main-color);
+}
+
+.covid-news .berita h2{ 
+    font-size: 1.3em;
+    font-weight: bold;
+}
+.covid-news .news{
+	box-shadow: var(--shadow-black-100);
+	padding:20px 40px;
+	background-color: var(--black-000);
+	border-radius: 5px;
+}
+.covid-news .news p{
+	font-size: 1em;
+    color: var(--black-900);
+    padding-top: 5px;
+}
+
+.covid-news p{
+    color:var(--black-900);
+}
+
+.covid-news .hoax-news h2{ 
+	 font-size: 1.5em;
+     font-weight: bold;
+}
+.covid-news .hoax{
+	box-shadow: var(--shadow-black-100);
+	padding:20px 40px;
+	background-color: var(--black-000);
+	border-radius: 5px;
+}
+
+/*-------------------Donasi------------------*/
+.donasi h1{
+	color: var(--main-color);
+}
+.donasi hr{
+	border-top: 4px solid var(--main-color);
+}
+.donasi a{
+	color: var(--black-900);
+}
+.donasi p{
+	color: var(--black-900);
+}
+
+/*---------Rumah Sakit-----------*/
+thead{
+	position: sticky; top: 0;
+	font-size: 0.8em;
+}
+
+tbody{
+	font-size: 0.8em;
+}
+.scroll{
+	height: 800px;
+	overflow: scroll;
+    color: #22272C;
+
+}
+
+
+/*------- Footer ----------*/
+footer{
+	font-size: 0.9em;
+	color: #ffffff;
+	background-color: var(--main-color);
+}
+
+footer a{
+	color:#ffffff;
+}
+
+
+/*----------------- Toggle theme -----------------*/
+.toggle-theme{
+	position: fixed;
+	right: 0;
+	top:calc(50% - 20px);
+	height: 40px;
+	width: 40px;
+	background-color: var(--dark-to-main-color);
+	z-index: 1200;
+	color:var(--black-000);
+	cursor: pointer;
+	border-radius: 50%;
+	box-shadow: var(--shadow-black-300);
+	font-size: 16px;
+	text-align: center;
+}
+.toggle-theme i{
+	line-height: 40px;
+} 
+
+
+
+
+
+
+
+
+
