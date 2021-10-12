@@ -3,7 +3,7 @@ This is my first open source project and you can clone it for educational purpos
 
 In this time of the covid-19 pandemic, I am trying to contribute to the community, hopefully it can be help the other people to reach information, especially more about this annoying virus. This project is not perfect in it maybe you find some bugs and i hope you can solve it for me. Thank you!
 
-the bugs you can find it at `/css/style.css` in line `251`..
+the bugs you can find it at `/css/style.css` in line `251`.
 
 
     > .home-img .img-1{
