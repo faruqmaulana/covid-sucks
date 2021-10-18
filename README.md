@@ -21,7 +21,7 @@ If you want to display the animation you can delete this code `display: none;` b
 In this case the bug may not be complicated because it's just the image position. You can try fixing its position using `padding-right :...%` and `padding-top:...%;` in css. I didn't do it because maybe I was tired.
 
 ## Enjoy my work!
-visit [covidanxiety](https://covidanxiety.000webhostapp.com/)
+visit [covidanxiety](https://covid-anxiety.herokuapp.com/)
 
 
 ## License
