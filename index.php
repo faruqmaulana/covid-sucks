@@ -16,36 +16,36 @@
     $data_covid4_result = number_format($data_covid4,0,',','.');
 
 
-    //data api provinsi
-    $dataProvinsi = file_get_contents('https://apicovid19indonesia-v2.vercel.app/api/indonesia/provinsi/alt');
-    $provinsi = json_decode($dataProvinsi, true);
+    //data api provinsi ??
+    // $dataProvinsi = file_get_contents('https://apicovid19indonesia-v2.vercel.app/api/indonesia');
+    // $provinsi = json_decode($dataProvinsi, true);
 
 
     //data api vaksin 
-    $url = file_get_contents('https://cekdiri.id/vaksinasi/');
-    $dataVaksin = json_decode($url, true);
-    $dataVaksin = $dataVaksin["monitoring"];
+    // $url = file_get_contents('https://cekdiri.id/vaksinasi/');
+    // $dataVaksin = json_decode($url, true);
+    // $dataVaksin = $dataVaksin["monitoring"];
 
-    $dataVaksin = end($dataVaksin);
-    //total sasaran vaksinasi
-    $total_sasaran_vaksinasi = number_format($dataVaksin['total_sasaran_vaksinasi'],0,',','.');
+    // $dataVaksin = end($dataVaksin);
+    // //total sasaran vaksinasi
+    // $total_sasaran_vaksinasi = number_format($dataVaksin['total_sasaran_vaksinasi'],0,',','.');
 
-    //vaksin1
-    $vaksinasi1 = number_format($dataVaksin['vaksinasi1'],0,',','.');
-    $persentaseVaksinasi1 = $dataVaksin['cakupan']['vaksinasi1'];
-    $lansia1 = $dataVaksin['cakupan']['lansia_vaksinasi1'];    
-    $masyarakatumum1 = $dataVaksin['cakupan']['masyarakat_umum_vaksinasi1'];    
-    $kelompok_usia1 = $dataVaksin['cakupan']['kelompok_usia_12_17_vaksinasi1'];
+    // //vaksin1
+    // $vaksinasi1 = number_format($dataVaksin['vaksinasi1'],0,',','.');
+    // $persentaseVaksinasi1 = $dataVaksin['cakupan']['vaksinasi1'];
+    // $lansia1 = $dataVaksin['cakupan']['lansia_vaksinasi1'];    
+    // $masyarakatumum1 = $dataVaksin['cakupan']['masyarakat_umum_vaksinasi1'];    
+    // $kelompok_usia1 = $dataVaksin['cakupan']['kelompok_usia_12_17_vaksinasi1'];
 
 
-    //vaksin2
-    $vaksinasi2 = number_format($dataVaksin['vaksinasi2'],0,',','.');
-    $persentaseVaksinasi2 = $dataVaksin['cakupan']['vaksinasi2'];
-    $tenagaKesehatan2 = $dataVaksin['cakupan']['sdm_kesehatan_vaksinasi2'];
-    $lansia2 = $dataVaksin['cakupan']['lansia_vaksinasi2'];
-    $petugasPublik2 = $dataVaksin['cakupan']['petugas_publik_vaksinasi2'];
-    $masyarakatumum2 = $dataVaksin['cakupan']['masyarakat_umum_vaksinasi2'];
-    $kelompok_usia2 = $dataVaksin['cakupan']['kelompok_usia_12_17_vaksinasi2'];
+    // //vaksin2
+    // $vaksinasi2 = number_format($dataVaksin['vaksinasi2'],0,',','.');
+    // $persentaseVaksinasi2 = $dataVaksin['cakupan']['vaksinasi2'];
+    // $tenagaKesehatan2 = $dataVaksin['cakupan']['sdm_kesehatan_vaksinasi2'];
+    // $lansia2 = $dataVaksin['cakupan']['lansia_vaksinasi2'];
+    // $petugasPublik2 = $dataVaksin['cakupan']['petugas_publik_vaksinasi2'];
+    // $masyarakatumum2 = $dataVaksin['cakupan']['masyarakat_umum_vaksinasi2'];
+    // $kelompok_usia2 = $dataVaksin['cakupan']['kelompok_usia_12_17_vaksinasi2'];
 
     //data api covid-19 news
     $url = file_get_contents('https://dekontaminasi.com/api/id/covid19/news');
